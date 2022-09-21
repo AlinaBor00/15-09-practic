@@ -7,7 +7,7 @@
 Console.WriteLine("Введите число от 1 до 7: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-string WeekendDigit(int num)
+void WeekendDigit(int num)
 {
    if(num > 0 && num < 8)
    {
@@ -24,7 +24,6 @@ string WeekendDigit(int num)
    {
        Console.WriteLine("Ошибка. Введите число от 1 до 7!");
    }
-   return("День");
 }
 
-string result =  WeekendDigit(number);
+   WeekendDigit(number);
