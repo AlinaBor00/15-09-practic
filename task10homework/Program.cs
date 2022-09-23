@@ -12,5 +12,10 @@ int ShowSecondDigit(int num)
     return secondDigit % 10;
 }
 
-int result = ShowSecondDigit(number);
-Console.WriteLine($"Вторая цифра числа {number} => {result}");
+if (number < 100) Console.WriteLine("Введено некорректное число");
+else if (number > 1000) Console.WriteLine("Введено некорректное число");
+else
+{
+    int result = ShowSecondDigit(number);
+    Console.WriteLine($"Вторая цифра числа {number} => {result}");
+}
