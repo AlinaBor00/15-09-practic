@@ -3,25 +3,29 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-Console.WriteLine("Введите число : ");
+Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-
-int ShowThirdDigit(int num)
+   int count = 1;
+void ShowThirdDigit(int num)
 {
-    //int result = 0;
-    if(num < 100)
+    if (num < 100)
     {
         Console.WriteLine("Третьей цифры нет");
     }
     else
     {
-        int num2 = 1;
-        for (int i = num; num >= 100; i--)
-        {
-            num2 = num2 * 10;
-        }
-        result = (num / num2) % 10;
+        while (count <= num) 
+            {
+                int result = (count / 10) % 10;
+            }
+            count ++;
     }
-return result;
 }
-int result = ShowThirdDigit(number);
+
+ShowThirdDigit(number);
+
+//не работает
+
+
+// int n = 64738;  // /10 = 6473 /10 = 647
+// int n2 = 647;  // 647 % 10 = 5
