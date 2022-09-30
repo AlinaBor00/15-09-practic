@@ -31,8 +31,12 @@ double DiffMaxMinNum(double[] array)
     double min = default;
     for (int i = 0; i < array.Length; i++)
     {
-        if(array[i] > max) max = array[i]; 
-        else if(array[i] < max) min = array[i];
+        if(array[i] > max) 
+        {
+            max = array[i]; 
+            min = array[i];
+        }
+        else if(array[i] < min) min = array[i];
 
         diff = max - min; 
     }
@@ -40,7 +44,7 @@ double DiffMaxMinNum(double[] array)
     return diff;
 }
 
-double[] arr = CreateArrayRndInt(5, 1, 9);
+double[] arr = CreateArrayRndInt(4, 1, 9);
 PrintArray(arr);
 double diffMaxMinNum = DiffMaxMinNum(arr);
 Console.WriteLine(Math.Round(diffMaxMinNum, 1, MidpointRounding.ToZero));
