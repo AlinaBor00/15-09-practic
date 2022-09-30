@@ -27,7 +27,16 @@ void PrintArray(double[] array)
 double DiffMaxMinNum(double[] array)
 {
     double diff = default;
-    diff = array[array.Length - 1] - array[0];
+    double max = default;
+    double min = default;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if(array[i] > max) max = array[i]; 
+        else if(array[i] < max) min = array[i];
+
+        diff = max - min; 
+    }
+    
     return diff;
 }
 
