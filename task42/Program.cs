@@ -20,7 +20,5 @@ int ConvertNumberToBinary(int num)
     return binaryNum;
  }
 
-
-
 int binNum = ConvertNumberToBinary(number);
 Console.WriteLine($"{number} -> {binNum}");
