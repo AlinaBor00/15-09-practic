@@ -3,15 +3,15 @@
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
 Console.WriteLine("Введите переменную b1: ");
-int b1 = Convert.ToInt32(Console.ReadLine());
+double b1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите переменную k1: ");
-int k1 = Convert.ToInt32(Console.ReadLine());
+double k1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите переменную b2: ");
-int b2 = Convert.ToInt32(Console.ReadLine());
+double b2 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите переменную k2: ");
-int k2 = Convert.ToInt32(Console.ReadLine());
+double k2 = Convert.ToInt32(Console.ReadLine());
 
-void Intersection(int argB1, int argK1, int argB2, int argK2)
+void Intersection(double argB1, double argK1, double argB2, double argK2)
 {
    double x = ((-argB2 + argB1) / (-argK1 + argK2));
    double y = (argK2 * x + argB2);
