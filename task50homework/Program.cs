@@ -41,14 +41,14 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-void ReturnElem(int[,] matrix, int rows, int columns)
+bool ReturnElem(int[,] matrix, int rows, int columns)
 {
-   if (rows < matrix.GetLength(0) && columns < matrix.GetLength(1)) Console.WriteLine(matrix[rows, columns]);
-   else Console.WriteLine($"{rows},{columns} -> Такого элемента в массиве нет");
+   return rows < matrix.GetLength(0) && columns < matrix.GetLength(1);
 }
 
 int [,] array2D = CreateMatrixRndInt(3, 4, 1, 9);
 PrintMatrix(array2D);
-ReturnElem(array2D, rows, columns);
+if(ReturnElem(array2D, rows, columns)) Console.WriteLine(array2D[rows, columns]);
+else Console.WriteLine($"{rows},{columns} -> Такого элемента в массиве нет");
 
 
