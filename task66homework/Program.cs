@@ -12,6 +12,6 @@ Console.WriteLine($"Сумма натуральных элементов в пр
 int SumOfNaturalNumbersFromMToN(int numM, int numN)
 {
     if (numM < numN) return numN + SumOfNaturalNumbersFromMToN(numM, numN - 1);
-    else if (numM > numN) return numN + SumOfNaturalNumbersFromMToN(numM, numN + 1);
-    else return numM;
+    if (numM > numN) return numN + SumOfNaturalNumbersFromMToN(numM, numN + 1);
+    return numM;
 }
