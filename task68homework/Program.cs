@@ -12,7 +12,7 @@ else Console.WriteLine("Введите корректное число");
 
 int AkkermanFunction(int numM, int numN)
 {
-    if (numN == 0) return numM + 1;
-    else if ((numN != 0) && (numM == 0)) return AkkermanFunction(numN - 1, 1);
-    else return AkkermanFunction(numN - 1, AkkermanFunction(numN, numM - 1));
+    if (numM == 0) return numN + 1;
+    if ((numN == 0) && (numM > 0)) return AkkermanFunction(numM - 1, 1);
+    return AkkermanFunction(numM - 1, AkkermanFunction(numM, numN - 1));
 }
